@@ -4,7 +4,7 @@ import { RegisterdataService } from '../services/registerdata.service';
 @Component({
   selector: 'app-dash',
   templateUrl: './dash.component.html',
-  styleUrls: ['./dash.component.css']
+  styleUrls: []
 })
 export class DashComponent implements OnInit {
   supply:number=0;
