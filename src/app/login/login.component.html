@@ -1,0 +1,23 @@
+
+<body>
+<div class="login-page">
+    <h1><strong>IBM Portal</strong></h1>
+    <div class="form">
+    <label>Login</label>
+    <form [formGroup]="loginForm" class="login-form" autocomplete="off" ngSubmit="onLogin(f)" #f="ngForm">
+        <div class="form-group">
+      <input type="email" id="email" formControlName="Email"  placeholder="Email address"  required/>
+      <input type="password" id="password" placeholder="Password" formControlName="Password"   required/>
+      <span class="validmsg" *ngIf="!loginForm.get('Email').valid && !loginForm.get('Password').valid" ></span>
+      <button type="button" (click)="onLogin(f)">Login</button>
+      <p class="message">Not registered? <a routerLink='/register'>Create an account</a></p>
+        </div>
+    </form>
+</div>
+</div>
+
+  
+</body>
+<h2>Why Signup ?</h2>
+<p>A Website that integrates several services in a single place, here you could be able to schedule meetings, look up for contacts inside IBM and find some statistics about the company !</p>
+<i class="material-icons">contact_mail  calendar_today bar_chart</i>

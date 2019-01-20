@@ -1,0 +1,38 @@
+
+<body>
+   
+  <div class="register-page">
+    <h1><strong>Register</strong></h1>
+      <div class="form">
+        <form [formGroup]="registerForm" class="register-form" autocomplete="off"   #f="ngForm">
+        <div class="form-group"> 
+            <label for="fname">First Name</label>
+            <input formControlName="Firstname" type="text"  id="fname" class="form-control" 
+            placeholder="First Name"  required  />
+            <span class="help-block" *ngIf="!registerForm.get('Firstname').valid && registerForm.get('Firstname').touched">Please enter your First Name</span><br>
+            <label for="lname">Last Name</label><input formControlName="Lastname" type="text"  id="lname" class="form-control"   placeholder="Last Name"  required  />
+            <span class="validmsg" *ngIf="!registerForm.get('Lastname').valid && registerForm.get('Lastname').touched">Please enter your Last Name</span><br>
+            <label for="email" >Email</label><input type="text" formControlName="Email" placeholder="Email address" class="form-control" required id="email" />
+            <span class="validmsg" *ngIf="!registerForm.get('Email').valid && registerForm.get('Email').touched">Please enter a valid email : xxxxx@ibm.com</span><br>
+            <label >Password</label><input formControlName="Password" type="password"  placeholder="Password" id="password"  class="form-control"  required minlength="6"  /><br>
+            <span class="validmsg" *ngIf="!registerForm.get('Password').valid && registerForm.get('Password').touched">Password must be at least 6 characters</span><br>
+          <label >Job Role</label><br><select id="jobs" name="jobs" formControlName="Job" class="form-control" >
+              <option value="Application Developer">Application Developer</option>
+              <option value="Supply Chain">Supply Chain</option>
+              <option value="HR">HR</option>
+              <option value="IT">IT</option>
+            </select>
+            <br>
+            <span class="validmsg" *ngIf="!registerForm.get('Job').valid && registerForm.get('Job').touched">Select a Job</span><br>
+          <label >Mobile</label><input type="text" class="form-control" placeholder="Mobile" id="mobile" formControlName="Mobile" required /> <br>
+          <span class="validmsg" *ngIf="!registerForm.get('Mobile').valid && registerForm.get('Mobile').touched">Enter your mobile number</span><br>
+          <button  type="submit" [disabled]="!registerForm.valid" (click)='register(f)'>Register</button>
+          <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </div>
+        </form> 
+    </div>
+ 
+</div>
+  </body>
+    <!-- <p *ngFor="let r of registerData | async">{{r.key}}</p> -->
+    <!-- <p *ngFor="let r of registerData | async">{{r.val().email}}</p> -->

@@ -1,0 +1,47 @@
+<app-header></app-header>
+<!-- <input type="text" id="myInput" (keyup)="searchTable()" placeholder="Search by names.." title="Type in a name"> 
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:20%;">Name</th>
+    <th style="width:40%;">Email</th>
+    <th style="width:40%;">Job Role</th>
+  </tr>
+  <tr>
+    <td><p *ngFor="let c of contacts | async">{{c.val().first}} {{c.val().last}}</p></td>
+    <td><p *ngFor="let c of contacts | async">{{c.val().email}}</p></td>
+    <td><p *ngFor="let c of contacts | async">{{c.val().job}}</p></td>
+  </tr>
+  
+  
+</table> -->
+
+<!-- 
+<form [formGroup]="contactsForm" class="meetform" autocomplete="off" #f="ngForm">
+  <div class="form-group">
+    Please enter the email you want to add  <input type="text" formControlName="email">  
+<button type="submit" [disabled]="!contactsForm.valid" (click)=addContact()>Add contact</button>
+</div> -->
+<!-- </form> -->
+<label for="row" class="labelStyle">All Contacts</label>
+<input type="text" id="myInput" (keyup)="searchTable()" placeholder="Search by names.." title="Type in a name">
+<table id="myTable">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Job Role</th>
+    </tr>
+    
+
+    <tr *ngFor="let c of registerData3 | async">
+        
+        <td>{{c.val().first}} {{c.val().last}}</td>
+        <td>{{c.val().email}}</td>
+        <td>{{c.val().job}}</td>
+        
+        
+        
+     
+    </tr> 
+  
+</table>

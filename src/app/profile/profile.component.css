@@ -1,0 +1,9 @@
+div.img{
+  background-image: url('https://www.freeiconspng.com/uploads/user-icon-png-person-user-profile-icon-20.png');
+  background-size: cover;
+  height:200px;
+  width:200px;
+}
+title{
+  font-size: 800px;
+}

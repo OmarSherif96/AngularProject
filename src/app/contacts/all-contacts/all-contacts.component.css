@@ -1,0 +1,29 @@
+div.tab{
+    position: absolute;
+    top:10%;
+    left:2%;
+    right:3%
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  .labelStyle{
+    color:blue;
+    font-size: 22px;
+  }
+  button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
