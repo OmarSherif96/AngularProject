@@ -12,7 +12,7 @@ import { Contact } from 'src/app/models/contact.model';
   styleUrls: ['./all-contacts.component.css']
 })
 export class AllContactsComponent implements OnInit {
-  private registerDataContacts:FirebaseListObservable<any[]>; 
+  public registerDataContacts:FirebaseListObservable<any[]>; 
   contactsForm:FormGroup
   contactFound:boolean;
    first:string;
