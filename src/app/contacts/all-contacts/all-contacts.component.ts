@@ -12,7 +12,7 @@ import { Contact } from 'src/app/models/contact.model';
   styleUrls: ['./all-contacts.component.css']
 })
 export class AllContactsComponent implements OnInit {
-  private registerData3:FirebaseListObservable<any[]>; 
+  // private registerData3:FirebaseListObservable<any[]>; 
   contactsForm:FormGroup
   contactFound:boolean;
    first:string;
@@ -21,11 +21,11 @@ export class AllContactsComponent implements OnInit {
           job:string;
   contacts:Contact[]=[];
   constructor(private registerService:RegisterdataService ){
-    this.registerData3=this.registerService.getRegisterData();
+    // this.registerData3=this.registerService.getRegisterData();
   }
 
   ngOnInit() {
-    console.log(this.registerData3);
+    
     this.contactsForm = new FormGroup({
       
       'email': new FormControl(null,[Validators.required,Validators.email]),
