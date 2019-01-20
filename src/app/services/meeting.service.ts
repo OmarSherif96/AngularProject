@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import {Response} from '@angular/http'
 import  'rxjs-compat'
 
-import { Observable } from 'rxjs/observable';
+
 import { strictEqual } from 'assert';
 import { Meeting } from '../models/meeting.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
