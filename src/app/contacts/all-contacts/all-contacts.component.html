@@ -33,7 +33,7 @@
     </tr>
     
 
-    <tr *ngFor="let c of registerData3 | async">
+    <tr *ngFor="let c of registerDataContacts | async">
         
         <td>{{c.val().first}} {{c.val().last}}</td>
         <td>{{c.val().email}}</td>
