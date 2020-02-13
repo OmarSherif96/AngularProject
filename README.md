@@ -1,6 +1,6 @@
 # Project Description
 
-A portal for employees that could fit for big enterprises
+A portal for employees that could fit for big enterprises, developed using Angular & Firebase
 
 ## Page
 
